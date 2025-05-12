@@ -1,0 +1,40 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+  }
+  
+  header {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .decor-title::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 4px;
+    background: teal;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  .after-icon::after {
+    content: " ✅";
+    color: green;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  

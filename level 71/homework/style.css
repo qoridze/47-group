@@ -1,0 +1,117 @@
+.decor-title::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 5px;
+    background-color: teal;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  .after-icon::after {
+    content: " ✅";
+  }
+  
+
+  .container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .container section {
+    flex: 1;
+    padding: 20px;
+    background: #e0f7fa;
+    text-align: center;
+  }
+  
+  @media (min-width: 1000px) {
+    .container {
+      flex-direction: row;
+    }
+  }
+  
+  @media (min-width: 600px) and (max-width: 999px) {
+    .container {
+      flex-wrap: wrap;
+    }
+  
+    .container section {
+      flex: 0 0 48%;
+    }
+  }
+  
+  @media (max-width: 599px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .container section {
+      flex: 1 0 100%;
+    }
+  }
+  
+
+  .sticky-menu {
+    position: sticky;
+    top: 0;
+    background-color: #fff176;
+    padding: 10px;
+    text-align: center;
+    z-index: 100;
+  }
+  
+  .context-btn {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    padding: 10px;
+  }
+  
+  .chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+  }
+  
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    margin: 40px 0;
+  }
+  
+  aside, main, nav {
+    background: #fce4ec;
+    padding: 20px;
+  }
+  
+  
+  .products {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .product {
+    background-color: #ffe0b2;
+    padding: 20px;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  @media (max-width: 599px) {
+    .products {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
