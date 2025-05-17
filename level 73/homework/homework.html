@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Favorite Movies</h1>
+    <ul id="movieList"></ul>
+
+    <script>
+    const favoriteMovies = ["Inception", "Interstellar", "The Matrix"];
+
+    const list = document.getElementById("movieList");
+    favoriteMovies.forEach(movie => {
+    const li = document.createElement("li");
+    li.textContent = movie;
+    list.appendChild(li);
+     });
+
+</script>
+         <h1>Trailer Zone</h1>
+    <p>Movie: Oppenheimer</p>
+    <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/uYPbbksJxIg"
+    frameborder="0" allowfullscreen>
+    </iframe>
+
+    <h1>Rate This Movie</h1>
+    <p>Movie: The Matrix</p>
+    <select id="rating">
+    <option value="1">★☆☆☆☆</option>
+    <option value="2">★★☆☆☆</option>
+    <option value="3">★★★☆☆</option>
+    <option value="4">★★★★☆</option>
+    <option value="5">★★★★★</option>
+    </select>
+    <button onclick="saveRating()">Submit</button>
+
+    <script>
+    function saveRating() {
+    const rating = document.getElementById("rating").value;
+    localStorage.setItem("matrixRating", rating);
+    alert("Saved rating: " + rating + " stars");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kung Fu Panda Media</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Kung Fu Panda Edit</h1>
+    <button onclick="playMedia()">▶ Play Audio & Video</button>
+
+    <video id="myAudio" src="https://www.youtube.com/watch?v=RMybPaEIAd0"></video>
+
+    <div id="videoContainer" class="hidden">
+      <video id="myVideo" width="640" height="360" controls>
+        <source src="https://www.youtube.com/watch?v=RMybPaEIAd0" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <script>
+    function playMedia() {
+      const audio = document.getElementById("myAudio");
+      audio.play();
+
+      const videoContainer = document.getElementById("videoContainer");
+      const video = document.getElementById("myVideo");
+      
+      videoContainer.classList.remove("hidden");
+      videoContainer.classList.add("visible");
+      video.play();
+    }
+  </script>
+
+</body>
+</html>
