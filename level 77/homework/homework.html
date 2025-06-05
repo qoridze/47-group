@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let arr1 = [1, 2, 3, 4, 5];
+
+    let spliced = arr1.splice(1, 3); 
+
+    console.log("Spliced:", spliced); 
+    console.log("arr1:", arr1);       
+
+
+    let sliced = spliced.slice(2, 3); 
+    console.log("Sliced:", sliced);
+
+
+    sliced.splice(1, 0, 99, 100); 
+    console.log("Sliced Modified:", sliced); 
+
+    let arr2 = [10, 20, 30, 40, 50, 60];
+
+
+    arr2.splice(2, 2, 300, 400, 500); 
+    console.log("After splice:", arr2); 
+
+
+    let sliced2 = arr2.slice(-2);
+    console.log("Last two:", sliced2); 
+
+    let arr3 = ['a', 'b', 'c', 'd', 'e'];
+
+
+    let removed = arr3.splice(1, 2); 
+    console.log("Removed:", removed);
+
+
+    let onlyC = removed.slice(1, 2); 
+
+
+    onlyC.push('x', 'y');
+    console.log("Final:", onlyC); 
+
+    let arr5 = ["one", "two", "three", "four", "five", "six", "seven"];
+
+
+    let removedStrs = arr5.splice(2, 3); 
+    console.log("Removed:", removedStrs); 
+
+
+    let slicedStrs = removedStrs.slice(0, 2); 
+
+
+    slicedStrs.push("hello");
+    console.log("Final:", slicedStrs);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    document.getElementById("btn").addEventListener("click", () => {
+    document.body.style.backgroundColor = "lightblue";
+    });
+
+    const changeBg = () => {
+    document.body.style.backgroundColor = "lightgreen";
+    };
+
+    document.getElementById("btn").addEventListener("click", changeBg);
+
+    document.getElementById("btn").addEventListener("click", 
+    (() => {
+    return () => {
+      document.body.style.backgroundColor = "pink";
+    };
+    })()
+    );
+
+    </script>
+</body>
+</html>
