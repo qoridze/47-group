@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      margin: 10px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    #btn {
+      padding: 10px 20px;
+      background-color: lightgreen;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>onmouseover / onmouseout</h3>
+  <div id="hoverBox1" class="box"></div>
+  <div id="hoverBox2" class="box"></div>
+
+  <h3>onmousedown / onmouseup</h3>
+  <button id="btn">დააწკაპე მარჯვენა ღილაკით</button>
+
+  <script>
+    // mouseover და mouseout
+    let box1 = document.getElementById("hoverBox1");
+    let box2 = document.getElementById("hoverBox2");
+
+    box1.onmouseover = () => box1.style.backgroundColor = "orange";
+    box1.onmouseout = () => box1.style.backgroundColor = "lightblue";
+
+    box2.onmouseover = () => box2.style.transform = "scale(1.2)";
+    box2.onmouseout = () => box2.style.transform = "scale(1)";
+
+    // mousedown და mouseup
+    let btn = document.getElementById("btn");
+
+    btn.onmousedown = () => btn.style.backgroundColor = "red";
+    btn.onmouseup = () => btn.style.backgroundColor = "lightgreen";
+  </script>
+
+    <div id="colorBox"></div>
+  <button id="activateBtn">🎯 ფერის შეცვლა ჩართე</button>
+  <button id="removeBtn">❌ Listener გათიშე</button>
+
+  <script>
+    const box = document.getElementById("colorBox");
+    const activateBtn = document.getElementById("activateBtn");
+    const removeBtn = document.getElementById("removeBtn");
+
+    function changeColor() {
+      box.style.backgroundColor = box.style.backgroundColor === "lightblue" ? "lightgray" : "lightblue";
+    }
+
+    activateBtn.addEventListener("click", () => {
+      box.addEventListener("click", changeColor);
+    });
+
+    removeBtn.addEventListener("click", () => {
+      box.removeEventListener("click", changeColor);
+    });
+  </script>
+
+
+</body>
+</html>

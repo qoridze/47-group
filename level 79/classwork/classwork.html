@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+      
+    <div class="box" onmouseover="enlarge(this)" onmouseout="shrink(this)"></div>
+    <div class="box" onmouseover="enlarge(this)" onmouseout="shrink(this)"></div>
+
     <script>
     document.getElementById("btn").addEventListener("click", () => {
     document.body.style.backgroundColor = "lightblue";
@@ -24,7 +29,18 @@
     };
     })()
     );
+    
+  
+    function enlarge(element) {
+      element.style.width = "200px";
+      element.style.height = "200px";
+    }
 
+    function shrink(element) {
+      element.style.width = "100px";
+      element.style.height = "100px";
+    }
+  
     </script>
 </body>
 </html>
