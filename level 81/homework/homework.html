@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="original">This is the original paragraph.</p>
+    <ul id="customList"></ul>
+    <ul id="myList"></ul>
+    <p>First Child</p>
+    <p>Second Child</p>
+    <p>Third Child</p>
+    <div id="styledTextDiv"></div>
+    <button onclick="removeFirst()">Remove First Child</button>
+    <script>
+    const ul = document.getElementById("myList");
+
+    for (let i = 0; i < 15; i++) {
+    const li = document.createElement("li");
+    li.textContent = `Item ${i}`;
+    ul.appendChild(li);
+    }
+
+    <div id="styledTextDiv"></div>
+    const div = document.getElementById("styledTextDiv");
+    const colors = ['red', 'blue', 'green', 'purple', 'orange'];
+    const sizes = ['16px', '18px', '20px', '22px', '24px'];
+
+    for (let i = 0; i < 5; i++) {
+    const p = document.createElement("p");
+    p.textContent = `Text ${i + 1}`;
+    p.setAttribute("style", `color: ${colors[i]}; font-size: ${sizes[i]};`);
+    div.appendChild(p);
+    }
+
+    function removeFirst() {
+    const box = document.getElementById("contentBox");
+    const first = box.firstElementChild;
+    if (first) {
+      box.removeChild(first);
+      alert("Child removed!");
+    }
+    }
+
+    const list = document.getElementById("customList");
+
+    for (let i = 1; i <= 5; i++) {
+    const li = document.createElement("li");
+    li.textContent = `I am list item ${i}`;
+    li.className = (i % 2 === 0) ? 'even' : 'odd';
+    list.appendChild(li);
+    }
+
+    const original = document.getElementById("original");
+    const clone = original.cloneNode(true);
+    clone.textContent += " (Cloned)";
+    clone.style.color = "crimson";
+    clone.style.fontWeight = "bold";
+    document.body.appendChild(clone);
+
+</script>
+</body>
+</html>

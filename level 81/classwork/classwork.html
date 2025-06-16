@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM ელემენტის შექმნა</title>
+</head>
+<body>
+  <div id="container"></div>
+  <div id="parent"></div>
+  <script>
+    const h3 = document.createElement("h3");
+
+    const text = document.createTextNode("goa best");
+
+    h3.appendChild(text);
+
+    document.body.appendChild(h3);
+
+    const container = document.getElementById("container");
+
+    for (let i = 0; i < 100; i++) {
+      const child = document.createElement("div");
+      child.textContent = `child ${i}`;
+      container.appendChild(child);
+    }
+  </script>
+
+</body>
+</html>
