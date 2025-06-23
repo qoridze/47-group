@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>To-Do List</h1>
+    <input type="text" id="todoInput" placeholder="Enter a task...">
+    <button id="addBtn">Add</button>
+    <button id="resetBtn">Reset</button>
+
+    <div id="todoList" class="todo-list"></div>
+    </div>
+
+      <h2>ჩემი ToDo List</h2>
+
+  <input type="text" id="todoInput" placeholder="რაიმე ჩაწერე">
+  <button onclick="addTodo()">დამატება</button>
+
+  <ul id="todoList"></ul>
+
+  <script src="script.js"></script>
+
+    <script>
+      function addTodo() {
+      const input = document.getElementById('todoInput');
+      const value = input.value.trim();
+
+      if (value === "") return;
+
+      const li = document.createElement('li');
+      li.textContent = value;
+
+      li.addEventListener('click', function () {
+        li.remove(); 
+      });
+
+      document.getElementById('todoList').appendChild(li);
+      input.value = "";
+    }
+    </script>
+</body>
+</html>

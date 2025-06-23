@@ -1,0 +1,89 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  text-align: center;
+}
+
+.feature i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.hero {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-img img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.hero-text h4 {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.hero-text i {
+  color: blue;
+  margin-right: 0.5rem;
+}
+
+.cars {
+  padding: 2rem;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.car-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.car-card button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.stats {
+  background-color: #5e2ce3;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.stat-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat-box {
+  background: white;
+  color: black;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 150px;
+}

@@ -6,7 +6,7 @@
   background-color: white;
 
   background-image: 
-    url('./car.png'),          
+    url('https://restylingcar.com/wp-content/uploads/2021/01/2012-mercedes-benz-cls-class-cls-63-amg-1.jpg'),          
     url('./car\ blar.png');    
 
   background-repeat: no-repeat, no-repeat;
@@ -44,4 +44,25 @@ select {
   font-size: 16px;
   border-radius: 6px;
   border: 1px solid #ccc;
+}
+
+body {
+  margin: 0;
+  background-color: #5e2ced; 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.car {
+  width: 400px;
+  margin-left: -50px; 
+  position: relative;
+}
+
+.car img {
+  width: 100%;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3); 
 }
